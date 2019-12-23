@@ -1,3 +1,0 @@
-[submodule "src/t/libtap"]
-	path = t/libtap
-	url = https://github.com/zorgnax/libtap
