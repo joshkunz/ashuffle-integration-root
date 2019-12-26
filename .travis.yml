@@ -1,7 +1,7 @@
 language: minimal
 
 env:
-    - IMAGE_NAME=jkz0/qemu
+    - IMAGE_NAME=jkz0/ashuffle-integration-root
 
 services:
     - docker
