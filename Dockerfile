@@ -2,9 +2,9 @@ FROM ubuntu:latest
 
 ENV MESON_VERSION 0.54.0
 
-RUN apt-get update -y && \
-    apt-get upgrade -y && \
-    apt-get install --no-install-recommends -y \
+RUN env DEBIAN_FRONTEND=noninteractive apt-get update -y && \
+    env DEBIAN_FRONTEND=noninteractive apt-get upgrade -y && \
+    env DEBIAN_FRONTEND=noninteraceive apt-get install --no-install-recommends -y \
         build-essential \
         cmake \
         doxygen \
