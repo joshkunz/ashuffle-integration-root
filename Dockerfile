@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-ENV MESON_VERSION 0.52.0
+ENV MESON_VERSION 0.54.0
 
 RUN apt-get update -y && \
     apt-get upgrade -y && \
