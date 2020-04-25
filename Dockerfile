@@ -10,6 +10,7 @@ RUN env DEBIAN_FRONTEND=noninteractive apt-get update -y && \
         doxygen \
         git \
         libboost-all-dev \
+        libglib2.0-dev \
         libmad0-dev libid3tag0-dev \
         ninja-build \
         pkg-config \
