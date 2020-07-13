@@ -8,6 +8,7 @@ RUN env DEBIAN_FRONTEND=noninteractive apt-get update -y && \
         build-essential \
         cmake \
         doxygen \
+        fuse \
         git \
         libboost-all-dev \
         libglib2.0-dev \
@@ -15,6 +16,7 @@ RUN env DEBIAN_FRONTEND=noninteractive apt-get update -y && \
         ninja-build \
         pkg-config \
         python3 python3-pip python3-setuptools python3-wheel \
+        valgrind \
         wget \
         xz-utils && \
     apt-get autoremove -y && \
