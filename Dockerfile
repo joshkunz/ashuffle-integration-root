@@ -28,7 +28,7 @@ COPY /scripts/* /opt/helpers/
 
 # Install Go
 
-ENV GO_VERSION 1.13
+ENV GO_VERSION 1.14.4
 RUN /opt/helpers/install_go.sh ${GO_VERSION}
 
 # Generate the "huge" music library
