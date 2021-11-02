@@ -26,7 +26,7 @@ jobs:
         with:
           images: |
             jkz0/ashuffle-integration-root
-            ghcr.io/joskunz/ashuffle-integration-root
+            ghcr.io/joshkunz/ashuffle-integration-root
           tags: |
             type=ref,event=tag
           flavor: |
