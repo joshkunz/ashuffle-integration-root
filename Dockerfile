@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-ENV MESON_VERSION 0.54.0
+ENV MESON_VERSION 0.56.0
 
 RUN env DEBIAN_FRONTEND=noninteractive apt-get update -y && \
     env DEBIAN_FRONTEND=noninteractive apt-get upgrade -y && \
