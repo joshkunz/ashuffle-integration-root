@@ -1,6 +1,7 @@
-FROM ubuntu:latest
+# "Latest LTS"
+FROM ubuntu:20.04
 
-ENV MESON_VERSION 0.54.0
+ENV MESON_VERSION 0.56.0
 
 RUN env DEBIAN_FRONTEND=noninteractive apt-get update -y && \
     env DEBIAN_FRONTEND=noninteractive apt-get upgrade -y && \
@@ -30,17 +31,17 @@ COPY /scripts/* /opt/helpers/
 
 # Install Go
 
-ENV GO_VERSION 1.14.4
+ENV GO_VERSION 1.17.2
 RUN /opt/helpers/install_go.sh ${GO_VERSION}
-
-# Generate the "huge" music library
-
-RUN /opt/helpers/generate_music.huge.sh
 
 # Install our static test helpers
 
 COPY /static/tracks/*.mp3 /music/
 COPY /static/mpd.conf /conf
+
+# Copy the golden MP3 to its new location and legacy music.huge location.
+COPY /static/gold.mp3 /static/gold.mp3
+COPY /static/gold.mp3 /music.huge/gold.mp3
 
 # Users of this image should replace this command. Return a non-zero
 # exit code if they don't.
