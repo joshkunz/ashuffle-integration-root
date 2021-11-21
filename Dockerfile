@@ -33,7 +33,7 @@ COPY /scripts/* /opt/helpers/
 # Install Go
 
 # renovate: datasource=github-tags depName=golang/go
-ENV GO_VERSION=1.17.2
+ENV GO_VERSION=go1.17.2
 RUN /opt/helpers/install_go.sh ${GO_VERSION}
 
 # Install our static test helpers

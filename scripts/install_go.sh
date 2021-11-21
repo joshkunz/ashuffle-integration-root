@@ -16,10 +16,10 @@ VERSION="$1"
 
 test -n "${VERSION}" || die "go version is empty, invalid version"
 
-url="https://dl.google.com/go/go${VERSION}.linux-amd64.tar.gz"
+url="https://dl.google.com/go/${VERSION}.linux-amd64.tar.gz"
 wget -q -O- "${url}" | tar --strip-components=1 -xz
 if test "$?" -ne 0; then
-    die "couldn't download and extract go-${VERSION} source"
+    die "couldn't download and extract ${VERSION} source"
 fi
 
 ln -s "${ROOT}/bin/go" "${BINDIR}/" || die "couldn't symlink go"
