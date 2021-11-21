@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "config:base",
+    ":disableDependencyDashboard",
+    ":timezone(America/Los_Angeles)",
+    "regexManagers:dockerfileVersions"
+  ],
+  "packageRules": [
+    {
+      "matchDatasources": ["github-tags"],
+      "matchPackageNames": ["golang/go"],
+      "versioning": "regex:go(?<major>\\d+)(\\.(?<minor>\\d+))?(\\.(?<patch>\\d+))?(?<prerelease>[a-z0-9]+)?"
+    }
+  ]
+}
