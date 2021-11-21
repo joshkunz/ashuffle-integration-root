@@ -1,7 +1,8 @@
 # "Latest LTS"
 FROM ubuntu:20.04
 
-ENV MESON_VERSION 0.56.0
+# renovate: datasource=pypi depName=meson
+ENV MESON_VERSION=0.56.0
 
 RUN env DEBIAN_FRONTEND=noninteractive apt-get update -y && \
     env DEBIAN_FRONTEND=noninteractive apt-get upgrade -y && \
@@ -31,7 +32,8 @@ COPY /scripts/* /opt/helpers/
 
 # Install Go
 
-ENV GO_VERSION 1.17.2
+# renovate: datasource=github-tags depName=golang/go
+ENV GO_VERSION=1.17.2
 RUN /opt/helpers/install_go.sh ${GO_VERSION}
 
 # Install our static test helpers
