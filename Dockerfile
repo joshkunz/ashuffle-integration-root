@@ -2,7 +2,7 @@
 FROM ubuntu:20.04
 
 # renovate: datasource=pypi depName=meson
-ENV MESON_VERSION=0.62.0
+ENV MESON_VERSION=0.62.1
 
 RUN env DEBIAN_FRONTEND=noninteractive apt-get update -y && \
     env DEBIAN_FRONTEND=noninteractive apt-get upgrade -y && \
