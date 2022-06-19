@@ -1,5 +1,5 @@
 # "Latest LTS"
-FROM ubuntu:22.04
+FROM ubuntu:20.04
 
 # renovate: datasource=pypi depName=meson
 ENV MESON_VERSION=0.62.2
