@@ -11,6 +11,7 @@ RUN env DEBIAN_FRONTEND=noninteractive apt-get update -y && \
         cmake \
         doxygen \
         fuse \
+        gcc-9 g++-9 \
         git \
         libboost-all-dev \
         libglib2.0-dev \
